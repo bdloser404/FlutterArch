@@ -67,8 +67,6 @@ nvim_config_installation(){
   echo 'Open Neovim Editor Its Autometically Install required Plugins for Flutter Developmemt'
   echo 'command $ nvim '
 }
-#!/bin/bash
-
 function setup_environment() {
   function install_sdk() {
     echo "Installing SDK..."
