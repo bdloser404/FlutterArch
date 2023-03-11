@@ -60,7 +60,7 @@ install_flutter_as_normal_user(){
 nvim_config_installation(){
   echo setting up neovim for flutter..
   proot-distro login --user $user archlinux -- curl -OL https://github.com/bdloser404/FlutterArch/releases/download/files/nvim.zip
-  root-distro login --user $user archlinux -- mkdir .config/
+  proot-distro login --user $user archlinux -- mkdir .config/
   proot-distro login --user $user archlinux -- unzip nvím.zip
   proot-distro login --user $user archlinux -- mv nvim ~/.config/
   
