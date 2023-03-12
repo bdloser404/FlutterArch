@@ -52,7 +52,7 @@ install_flutter_as_normal_user(){
   proot-distro login --user $user archlinux -- flutter channel beta
   proot-distro login --user $user archlinux -- flutter upgrade --force
   proot-distro login --user $user archlinux -- flutter doctor -v
-  proot-distro login --user $user archlinux -- mv shader_lib ~/flutter/bin/cache/artifacts/engine/android-arm64-release/linux-arm64/
+  proot-distro login --user $user archlinux --cp -r shader_lib ~/flutter/bin/cache/artifacts/engine/android-arm64-release/linux-arm64/ && rm -rf shader_lib
 }
 
 #optional configuration
@@ -61,7 +61,7 @@ nvim_config_installation(){
   echo setting up neovim for flutter..
   proot-distro login --user $user archlinux -- curl -OL https://github.com/bdloser404/FlutterArch/releases/download/files/nvim.zip
   proot-distro login --user $user archlinux -- mkdir .config/
-  proot-distro login --user $user archlinux -- unzip nvím.zip
+  proot-distro login --user $user archlinux -- unzip nvim.zip
   proot-distro login --user $user archlinux -- mv nvim ~/.config/
   
   echo 'Open Neovim Editor Its Autometically Install required Plugins for Flutter Developmemt'
