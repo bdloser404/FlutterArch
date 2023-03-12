@@ -49,7 +49,7 @@ install_flutter_as_normal_user(){
   proot-distro login --user $user archlinux -- mkdir -p ~/flutter/bin/cache/artifacts/engine/android-arm64-release/linux-arm64
   proot-distro login --user $user archlinux -- mv gen_snapshot ~/flutter/bin/cache/artifacts/engine/android-arm64-release/linux-arm64/
   proot-distro login --user $user archlinux -- flutter doctor
-  proot-distro login --user $user archlinux -- flutter channel dev
+  proot-distro login --user $user archlinux -- flutter channel beta
   proot-distro login --user $user archlinux -- flutter upgrade --force
   proot-distro login --user $user archlinux -- flutter doctor -v
   proot-distro login --user $user archlinux -- mv shader_lib ~/flutter/bin/cache/artifacts/engine/android-arm64-release/linux-arm64/
