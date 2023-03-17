@@ -42,7 +42,7 @@ install_flutter_as_normal_user(){
   proot-distro login --user $user archlinux -- unzip engine.zip
   echo Setting Up Arch For Flutter...
   proot-distro login --user $user archlinux -- sed -i "s#export PATH=.*#&:/home/$user/flutter/bin#g" /etc/profile.d/termux-proot.sh
-  proot-distro login --user $user archlinux -- rm -rf /flutter/bin/cache/dart-sdk
+  proot-distro login --user $user archlinux -- rm -rf ~/flutter/bin/cache/dart-sdk
   proot-distro login --user $user archlinux -- mkdir -p ~/flutter/bin/cache/artifacts/
   proot-distro login --user $user archlinux -- mv engine ~/flutter/bin/cache/artifacts/
   proot-distro login --user $user archlinux -- flutter doctor
