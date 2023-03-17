@@ -16,4 +16,4 @@ check_install_packages() {
 }
 
 # Call function with list of package names
-check_install_packages "git" "glu" "xz" "zip" "neovim"
+check_install_packages "git" "glu" "xz" "zip" "neovim" "sudo"
