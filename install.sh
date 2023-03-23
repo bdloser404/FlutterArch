@@ -2,7 +2,7 @@
 echo "Inspired From Hax4us Flutter Installation Script.."
 echo "Installing FlutterArch...."
 
-t#termux-setup-storage
+#termux-setup-storage
 # Root Login Command 
 `root = "proot-distro login archlinux"`
 # Flutter SDK Directory
