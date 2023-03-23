@@ -4,18 +4,18 @@ echo "Installing FlutterArch...."
 
 #termux-setup-storage
 # Root Login Command 
-`root = $(proot-distro login archlinux)`
+root = "proot-distro login archlinux"
 # Flutter SDK Directory
-`FLUTTER = $($HOME/Android/flutter)`
+FLUTTER = "$HOME/Android/flutter"
 # cmdline tool directoru 
-`CMDLINE = $($HOME/Android/cmdline-tools)`
+CMDLINE = "$HOME/Android/cmdline-tools"
 #platform tools 
-`PTOOLS = $($HOME/Android/platform-tools)`
+PTOOLS = "$HOME/Android/platform-tools"
 # neovim plug install cmd
-`PLUG_INSTALL = $(nvim +'PlugInstall --sync' +qa)`
+PLUG_INSTALL = "nvim +'PlugInstall --sync' +qa"
 #install VimPlug For Neovim
-`VIM_PLUG = $(sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim')`
+VIM_PLUG = "sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'"
 
 #Checking for required pkgs
 function check_deps() {
@@ -53,7 +53,7 @@ add_normal_user() {
 }
 
 # User Login Commannd 
-`puser = $(proot-distro login --user $user archlinux)`
+puser = "proot-distro login --user $user archlinux"
 
 install_flutter_as_normal_user(){
   #Android SDK Path 
