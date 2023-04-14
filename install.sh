@@ -49,13 +49,13 @@ install_flutter_as_normal_user(){
       proot-distro login --user $user archlinux -- tar -xvf flutter_linux_3.3.10-stable.tar.xz
     else
       echo "Downloading Flutter SDK..."
-      proot-distro login --user $user archlinux -- wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.3.10-stable.tar.xz && tar -xvf flutter_linux_3.3.10-stable.tar.xz
+      proot-distro login --user $user archlinux -- wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.3.10-stable.tar.xz && tar -xVf flutter_linux_3.3.10-stable.tar.xz
 
     fi
 
     if [ ! -f $PREFIX/var/lib/proot-distro/installed-rootfs/archlinux/home/$user/engine.zip ]; then
       echo " Downloading engine.zip..."
-      proot-distro login --user $user archlinux -- curl -LO https://github.com/bdloser404/FlutterArch/releases/download/files/engine.zip
+      proot-distro login --user $user archlinux -- curl -OL https://github.com/bdloser404/FlutterArch/releases/download/files/engine.zip
     fi
   }
 
@@ -108,7 +108,7 @@ nvim_config_installation(){
 
     if [ ! -f $PREFIX/var/lib/proot-distro/installed-rootfs/archlinux/home/$user/nvim.zip ]; then
       echo " Downloading nvim.zip..."
-      proot-distro login --user $user archlinux -- curl -LO https://github.com/bdloser404/FlutterArch/releases/download/files/nvim.zip
+      proot-distro login --user $user archlinux -- curl -OL https://github.com/bdloser404/FlutterArch/releases/download/files/nvim.zip
     fi
   proot-distro login --user $user archlinux -- mkdir -p .config/nvim 
 
